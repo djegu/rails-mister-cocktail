@@ -8,3 +8,24 @@
 // layout file, like app/views/layouts/application.html.erb
 import 'bootstrap';
 console.log('Hello World from Webpacker')
+
+import Typed from 'typed.js';
+
+var options = {
+  strings: ["Coucou", "Clara", "t'es au max", "j'ai chaud" ],
+  typeSpeed: 50,
+  loop: true
+}
+
+var typed = new Typed("#typedjs", options);
+
+$(".fas.fa-plus").click(function(){
+    $(this).toggleClass("down");
+    if ($(this).hasClass("down")) {
+      $(".my-dropdown-menu").slideDown();
+    } else {
+      $(".my-dropdown-menu").slideUp();
+    }
+
+});
+
